@@ -1,17 +1,27 @@
 const cart = ["shoes", "pants", "kurta"];
 
-const promise = createOrder(cart);  // orderId
-console.log(promise);
+createOrder(cart)  // orderId
+    .then(function (orderId) {
+        console.log(orderId);
+        return orderId;
 
-promise.then(function () {
-    proceedToPayment(orderId);
-    // proceedToPayment(orderId)
-})
-
-// error handing
-.catch(function (err){
-    console.log(err.message);
-});
+        // proceedToPayment(orderId)
+    })
+    .then(function () {
+        return proceedToPayment(orderId);
+    })
+    .then(function (paymentInfo) {
+        console.log(paymentInfo);
+    })
+    .catch(function (err) {
+        console.log(err.message);  // error handing from any
+    })
+    .then(function (orderId) {
+        return proceedToPayment(orderId);
+    })
+    .then(function (paymentInfo) {
+        console.log(paymentInfo);
+    });
 
 
 // imp part this "Creating a Promise" we can resolve, reject a promise
@@ -37,6 +47,13 @@ function createOrder(cart) {
 
     });
     return pr;
+}
+
+function proceedToPayment(orderId) {
+
+    return new Promise(function (resolve, reject) {
+        resolve("Payment Successful")
+    })
 }
 
 function validateCart(cart) {
