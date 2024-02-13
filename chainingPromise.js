@@ -1,5 +1,7 @@
 const cart = ["shoes", "pants", "kurta"];
 
+
+
 createOrder(cart)  // orderId
     .then(function (orderId) {
         console.log(orderId);
@@ -14,14 +16,22 @@ createOrder(cart)  // orderId
         console.log(paymentInfo);
     })
     .catch(function (err) {
-        console.log(err.message);  // error handing from any
+        console.log(err.message);  
+        // error handing from any if it's top only handed top error and bottom hand aobove all error
+
     })
+
+    // after catch No matter what Happnes, I will definietely be called.  
+
     .then(function (orderId) {
         return proceedToPayment(orderId);
     })
     .then(function (paymentInfo) {
         console.log(paymentInfo);
-    });
+    })
+    .then(function(orderId){
+        console.log("No matter what Happnes, I will definietely be called.");
+    })
 
 
 // imp part this "Creating a Promise" we can resolve, reject a promise
