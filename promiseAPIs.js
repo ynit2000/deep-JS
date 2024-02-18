@@ -37,3 +37,17 @@
 
 //                 4. Promise.any()
 
+                  //   const promises = [promise1, promise2, promise3];
+                                    //   3s        1s        2s               
+                  // Promise.any(promises)
+                //    this race but only for success 
+
+                //    wait for 1st success => val2  
+
+                //    take example  Promise2 fail then it's go for promise3 
+
+                //    wait for 1st success => val3
+
+                // what if all fail => AgrgregateErorr array = [error1,error2,error3]
+
+
