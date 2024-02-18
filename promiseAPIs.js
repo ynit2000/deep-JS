@@ -1,5 +1,5 @@
 // 4 type Promise: 
-                // 1. Promise.all()  : 3 user making api call parallel call at same time
+    //          1. Promise.all()  : 3 user making api call parallel call at same time
                 //   const promises = [promise1, promise2, promise3];
                                  //   3s         1s         2s  
 
@@ -8,7 +8,7 @@
                 //   after 3s it's give [val1, val2, val3]
                 //   wait for all of their to finish 
 
-
+    // fail fast 
                  //   take ex. if promise2 is fail after 1s 
                 //   immediately when fail this going to show error 
 
