@@ -15,6 +15,7 @@
 
 
 //                 2. Promise.allSettled() 
+
                     //   3 user making api call parallel call at same time
                   //   const promises = [promise1, promise2, promise3];
                                      //   3s Y        1s  N       2s Y
@@ -23,6 +24,16 @@
                 //   it give  array [val1,error,val3]
 
 //                 3. Promise.race() 
+
+                  //   const promises = [promise1, promise2, promise3];
+                                    //   3s        1s        2s               
+                 // Promise.race(promises)
+
+                //  value of 1st settled Promise (this is race)
+                //  after 1s ==> val2 
+
+                // Promise2 is fail 
+                // after 1s ==> erorr 
 
 //                 4. Promise.any()
 
