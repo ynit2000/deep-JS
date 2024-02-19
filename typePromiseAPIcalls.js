@@ -20,3 +20,14 @@ Promise.any([p1,p2,p3]).then(res => {
     // console.error(err);
     console.log(err);
 });
+
+
+// lingo for interviewer 
+
+        //          settled ----> Get to result 
+        //             |
+        //       -------------
+        //       |           |
+        // resolve         reject
+        // success         failure
+        // fulfilled       reject
