@@ -31,3 +31,12 @@ Promise.any([p1,p2,p3]).then(res => {
         // resolve         reject
         // success         failure
         // fulfilled       reject
+
+        
+
+//  4 Type of Promise :
+              
+                //    1. all {"Fast fail"}
+                //    2.allSettled {"wait for all to settled(resolve/reject)"}
+                //    3.race {"wait for 1st  comer settled (resolve/reject) "}
+                //    4.any {"wait for 1st success "}
