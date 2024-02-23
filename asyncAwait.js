@@ -28,10 +28,15 @@
 * Async and await used for handing Proimse *
 */
 
-const p = new Promise((resolve, reject) => {
+const p1 = new Promise((resolve, reject) => {
     setTimeout(() =>{
-        resolve("Promise Resolved Value!!");
+        resolve("Promise Resolved Value!! P1");
     },10000)
+});
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() =>{
+        resolve("Promise Resolved Value!! P2");
+    },5000)
 });
 // async and await handing Promise
 
@@ -40,7 +45,7 @@ const p = new Promise((resolve, reject) => {
 async function handlePromise(){
     // Js Engine was waiting for promise to resolved
     console.log("Hello! Good!");
-    const val = await p;
+    const val = await p1;
     console.log("Namaste JavaScript");
     console.log(val); 
               
@@ -49,9 +54,18 @@ async function handlePromise(){
     //        : Namaste JavaScript (after 10sec)
     //        : Promise Resolved Value!! (after 10sec)
 
-    const val2 = await p;
+    const val2 = await p2;
     console.log("Namaste JavaScript Part2");
     console.log(val2); 
+
+    // case : when we take "P"
+    // output : Hello! Good! 
+    //        : Namaste JavaScript (after 10sec)
+    //        : Promise Resolved Value!! (after 10sec)
+    //        : Namaste JavaScript Part2 (after 10sec) just after the "all 10sec"
+    //        :  Promise Resolved Value!! (after 10sec)
+              
+
 }
 handlePromise();
 
