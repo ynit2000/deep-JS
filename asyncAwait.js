@@ -39,13 +39,19 @@ const p = new Promise((resolve, reject) => {
 //  await can only be used inside an async function 
 async function handlePromise(){
     // Js Engine was waiting for promise to resolved
-
+    console.log("Hello! Good!");
     const val = await p;
     console.log("Namaste JavaScript");
     console.log(val); 
+              
 
-    // output : Namaste JavaScript
-    //        : Promise Resolved Value!!
+    // output : Hello! Good! 
+    //        : Namaste JavaScript (after 10sec)
+    //        : Promise Resolved Value!! (after 10sec)
+
+    const val2 = await p;
+    console.log("Namaste JavaScript Part2");
+    console.log(val2); 
 }
 handlePromise();
 
