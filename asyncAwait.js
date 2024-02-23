@@ -35,19 +35,26 @@ const p = new Promise((resolve, reject) => {
 });
 // async and await handing Promise
 
+
 //  await can only be used inside an async function 
 async function handlePromise(){
+    // Js Engine was waiting for promise to resolved
+
     const val = await p;
+    console.log("Namaste JavaScript");
     console.log(val); 
+
+    // output : Namaste JavaScript
+    //        : Promise Resolved Value!!
 }
 handlePromise();
 
 
 // before async and await handing Promise
 
-function getData(){
-    // Js Engine will not wait for promise to be resolved
-    p.then(res => console.log(res));
-}
+// function getData(){
+//     // Js Engine will not wait for promise to be resolved
+//     p.then(res => console.log(res));
+// }
 
-getData();
+// getData();
