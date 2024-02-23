@@ -29,7 +29,9 @@
 */
 
 const p = new Promise((resolve, reject) => {
-    resolve("Promise Resolved Value!!");
+    setTimeout(() =>{
+        resolve("Promise Resolved Value!!");
+    },10000)
 });
 // async and await handing Promise
 
@@ -43,8 +45,9 @@ handlePromise();
 
 // before async and await handing Promise
 
-// function getData(){
-//     p.then(res => console.log(res);)
-// }
+function getData(){
+    // Js Engine will not wait for promise to be resolved
+    p.then(res => console.log(res));
+}
 
-// getData();
+getData();
