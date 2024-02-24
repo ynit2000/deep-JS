@@ -39,11 +39,11 @@ async function handleMyPromise(){
 
     const data =  await fetch(API_URl)
 
-    data.json()  // this again is Promise here 
+   const jsonValue = await data.json()  // this again is Promise here 
 
     // fetch() ==> Response.json()  ==> jsonValue
 
-    console.log(data);
+    console.log(jsonValue);
 
 }
 handleMyPromise();
