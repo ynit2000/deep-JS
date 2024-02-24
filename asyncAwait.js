@@ -28,6 +28,9 @@
 * Async and await used for handing Proimse *
 */
 
+// interview Tip 
+ 1. what is async await : ---> don't randomly start explaining
+              true way  : ---> async is keeyword which is used with function --> async function   -->> await can only be used inside an async function 
 
 
 
