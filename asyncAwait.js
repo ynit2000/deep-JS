@@ -28,15 +28,31 @@
 * Async and await used for handing Proimse *
 */
 
+
+
+
+
+// real used of Promise in APi 
+const 
+
+
+
+
+
+
+
+
+
+
 const p1 = new Promise((resolve, reject) => {
     setTimeout(() =>{
         resolve("Promise Resolved Value!! P1");
-    },10000)
+    },5000)
 });
 const p2 = new Promise((resolve, reject) => {
     setTimeout(() =>{
         resolve("Promise Resolved Value!! P2");
-    },5000)
+    },10000)
 });
 // async and await handing Promise
 
