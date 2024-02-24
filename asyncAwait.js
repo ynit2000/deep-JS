@@ -23,14 +23,15 @@
 *Examples of using async/ await 
 *Erorr Handling
 *Interviews
-*Async await vs Promise.then/.catch
+*  Async await vs Promise.then/.catch :::--->
+                                         Async await is just stanyixitcal sugar on "Promise.then/.catch"
 *
 * Async and await used for handing Proimse *
 */
 
 // interview Tip 
- 1. what is async await : ---> don't randomly start explaining
-              true way  : ---> async is keeyword which is used with function --> async function   -->> await can only be used inside an async function 
+//   what is async await : ---> don't randomly start explaining
+//               true way  : ---> async is keeyword which is used with function --> async function   -->> await can only be used inside an async function 
 
 
 
