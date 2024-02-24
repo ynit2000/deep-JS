@@ -33,7 +33,20 @@
 
 
 // real used of Promise in APi 
-const 
+const API_URl = "https://api.github.com/users/ynit2000"
+
+async function handleMyPromise(){
+
+    const data =  await fetch(API_URl)
+
+    data.json()  // this again is Promise here 
+
+    // fetch() ==> Response.json()  ==> jsonValue
+
+    console.log(data);
+
+}
+handleMyPromise();
 
 
 
