@@ -32,18 +32,22 @@
 
 
 
-// real used of Promise in APi 
+// real used of Promise in APi  and handing error using "try"
 const API_URl = "https://api.github.com/users/ynit2000"
 
 async function handleMyPromise(){
 
     const data =  await fetch(API_URl)
 
-   const jsonValue = await data.json()  // this again is Promise here 
+   try{
+     const jsonValue = await data.json()  // this again is Promise here 
 
-    // fetch() ==> Response.json()  ==> jsonValue
+     // fetch() ==> Response.json()  ==> jsonValue
 
-    console.log(jsonValue);
+     console.log(jsonValue); 
+   } catch (err){
+    console.log(err);
+   }
 
 }
 handleMyPromise();
