@@ -92,3 +92,5 @@ const objj2 = {
 objj2.x();
 
 // this  inside DOM element ==>> refence to HTML element
+
+// this inside class, constructor ( skep to good part )
