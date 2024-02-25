@@ -13,7 +13,16 @@ function x(){
 x();
 
 
-// this in strict mode - ( this substitution )
+// this in strict mode - ( this substitution ) :
+//    if the value of "this" keyword is undefined or null 
+
+    //   'this' keywords will be replaced with globalObject
+    //  only  in non strict mode 
+
+     
+     this value depends on how this is called ( window )
+
+ 
 
 // this value depents on how this is called ( window )
 
