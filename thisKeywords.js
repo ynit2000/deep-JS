@@ -79,4 +79,16 @@ objj.x();
 
 // this inside nested arrow function
 
+const objj2 = {
+    a: 11,
+    x: function (){
+        const y = () => {
+            console.log(this);
+        }
+        y();
+    },
+}
+
+objj2.x();
+
 // this  inside DOM
