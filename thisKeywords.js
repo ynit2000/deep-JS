@@ -40,12 +40,28 @@ const obj ={
     x: function (){
         console.log(this); // here 'this' reffer to a,x method of 'obj'
         console.log(this.x); // here 'this' reffer to x method of 'obj'
+        console.log(this.a); // here 'this' reffer to "10" method of 'obj'
     }
+
 }
 obj.x();
 
 
-// call apply bind methods ( sharing methods )
+const student = {
+    name: "nix",
+    printName: function (){
+        console.log(this.name);
+    },
+}
+const student2 = {
+    name: "rix",
+    
+}
+student.printName();
+
+student.printName.call(student2);  // value of thsi student2
+
+// call apply bind methods ( sharing methods ) { ***topic on which interviewer like to ask Ques about** }
 
 // this inside arrow function 
 
