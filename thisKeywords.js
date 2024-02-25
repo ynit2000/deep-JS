@@ -10,7 +10,7 @@ function x(){
     // the value depends on strict / non strict mode 
     console.log(this);
 }
-x();
+
 
 
 // this in strict mode - ( this substitution ) :
@@ -19,12 +19,21 @@ x();
     //   'this' keywords will be replaced with globalObject
     //  only  in non strict mode 
 
+    // 'this' keyword  value depends on how the function is called (window)
+
+    x();   // undefined
+    window.x();  // windows
+
+
      
-     this value depends on how this is called ( window )
+    //  this value depends on how this is called ( window )
 
  
 
 // this value depents on how this is called ( window )
+
+
+// this inside a object's method
 
 // call apply bind methods ( sharing methods )
 
