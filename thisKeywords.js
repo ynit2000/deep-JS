@@ -55,11 +55,13 @@ const student = {
 }
 const student2 = {
     name: "rix",
-    
+
 }
 student.printName();
 
 student.printName.call(student2);  // value of thsi student2
+student.printName.apply(student2);  // value of thsi student2
+student.printName.bind(student2);  // value of thsi student2
 
 // call apply bind methods ( sharing methods ) { ***topic on which interviewer like to ask Ques about** }
 
