@@ -83,7 +83,7 @@ const objj2 = {
     a: 11,
     x: function (){
         const y = () => {
-            console.log(this);
+            console.log(this);  // 
         }
         y();
     },
@@ -91,4 +91,4 @@ const objj2 = {
 
 objj2.x();
 
-// this  inside DOM
+// this  inside DOM element ==>> refence to HTML element
