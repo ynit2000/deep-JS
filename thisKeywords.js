@@ -59,13 +59,23 @@ const student2 = {
 }
 student.printName();
 
+
+
+// call apply bind methods ( sharing methods ) { ***topic on which interviewer like to ask Ques about** }
+
 student.printName.call(student2);  // value of thsi student2
 student.printName.apply(student2);  // value of thsi student2
 student.printName.bind(student2);  // value of thsi student2
 
-// call apply bind methods ( sharing methods ) { ***topic on which interviewer like to ask Ques about** }
+// this inside arrow function ( arrow function don't have there owns 'this' take there enclosing lexical scope )
 
-// this inside arrow function 
+const objj = {
+    a: 10;,
+    x: () =>{
+        console.log(this);
+    },
+}
+objj.x();
 
 // this inside nested arrow function
 
