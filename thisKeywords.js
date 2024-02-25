@@ -19,7 +19,7 @@ function x(){
     //   'this' keywords will be replaced with globalObject
     //  only  in non strict mode 
 
-    // 'this' keyword  value depends on how the function is called (window)
+    // 'this' keyword  value depends on "how the function is called" (window)
 
     x();   // undefined
     window.x();  // windows
@@ -33,7 +33,17 @@ function x(){
 // this value depents on how this is called ( window )
 
 
-// this inside a object's method
+// this inside a object's method 
+//  { here 'x' method of 'obj'}
+const obj ={
+    a: 10,
+    x: function (){
+        console.log(this); // here 'this' reffer to a,x method of 'obj'
+        console.log(this.x); // here 'this' reffer to x method of 'obj'
+    }
+}
+obj.x();
+
 
 // call apply bind methods ( sharing methods )
 
