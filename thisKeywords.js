@@ -70,11 +70,11 @@ student.printName.bind(student2);  // value of thsi student2
 // this inside arrow function ( arrow function don't have there owns 'this' take there enclosing lexical scope )
 
 const objj = {
-    a: 10;,
-    x: () =>{
-        console.log(this);
+    a: 10,
+    x: () => {
+        console.log(this);    // here 'this' ::: there owns 'this' take there enclosing lexical scope
     },
-}
+};
 objj.x();
 
 // this inside nested arrow function
